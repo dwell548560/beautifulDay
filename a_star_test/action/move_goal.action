@@ -1,0 +1,8 @@
+# Define the goal
+geometry_msgs/PoseStamped  goal  # Specify which dishwasher we want to use
+---
+# Define the result
+uint32 move_success
+---
+# Define a feedback message
+float32 percent_complete

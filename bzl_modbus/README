@@ -1,0 +1,6 @@
+# 写控制字0x05，读控制字0x06
+# write modbus：往0x300地址写入4个寄存器，数据为0x1234,0x2345,0x3456,0x4567
+rostopic pub -v -1 /ros_to_modbus modbus_demo/Modbus "0x05" "0x300" "4" "[0x1234, 0x2345, 0x3456, 0x4567]"
+
+# read modbus：读取0x4300地址开始的16个寄存器，数据返回通过监听modbus_to_ros获取
+rostopic pub -v -r1 /ros_to_modbus modbus_demo/Modbus "0x06" "0x4300" "16" "[]"

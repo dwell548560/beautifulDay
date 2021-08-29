@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="modbus_demo" type="modbus_server" name="modbus_server" output="screen" >
+		<param name="debug" type="int" value="0"/>
+	</node>
+</launch>

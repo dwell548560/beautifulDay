@@ -1,0 +1,49 @@
+<launch>
+	<node pkg="bzl_modbus" type="modbus_client_v2" name="modbus_client_1" output="screen" >
+		<param name="connect_name" type="string" value="PLC"/>
+		<param name="backend" type="string" value="TCP"/>
+		<param name="server_ip" type="string" value="192.168.1.10"/>
+		<param name="port" type="int" value="1502"/>
+		<param name="slave_id" type="int" value="1"/>
+		<param name="update_interval" type="int" value="200000"/>
+		<param name="debug" type="int" value="0"/>
+		<param name="sync" type="int" value="0"/>
+
+		<param name="hold_reg_start" type="int" value="8192"/>
+		<param name="hold_reg_num" type="int" value="48"/>
+		<param name="input_reg_start" type="int" value="24576"/>
+		<param name="input_reg_num" type="int" value="32"/>
+
+	</node>
+
+	<!--<node pkg="bzl_modbus" type="modbus_client_v2" name="modbus_client_2" output="screen" >
+		<param name="connect_name" type="string" value="VISUAL"/>
+		<param name="backend" type="string" value="TCP"/>
+		<param name="server_ip" type="string" value="192.168.1.117"/>
+		<param name="port" type="int" value="1502"/>
+		<param name="slave_id" type="int" value="1"/>
+		<param name="update_interval" type="int" value="200000"/>
+		<param name="debug" type="int" value="0"/>
+		<param name="sync" type="int" value="0"/>
+
+		<param name="hold_reg_start" type="int" value="1000"/>
+		<param name="hold_reg_num" type="int" value="256"/>
+		<param name="input_reg_start" type="int" value="1256"/>
+		<param name="input_reg_num" type="int" value="256"/>
+	</node>-->
+
+	<!--<node pkg="bzl_modbus" type="modbus_client_v2" name="modbus_client_3" output="screen" >
+		<param name="backend" type="string" value="RTU"/>
+		<param name="rtu_port" type="string" value="/dev/ttyTHS1"/>
+		<param name="rtu_baudrate" type="int" value="115200"/>
+		<param name="slave_id" type="int" value="1"/>
+		<param name="update_interval" type="int" value="200000"/>
+		<param name="debug" type="int" value="0"/>
+		<param name="sync" type="int" value="0"/>
+
+		<param name="hold_reg_start" type="int" value="0"/>
+		<param name="hold_reg_num" type="int" value="256"/>
+		<param name="input_reg_start" type="int" value="256"/>
+		<param name="input_reg_num" type="int" value="256"/>
+	</node>-->
+</launch>
